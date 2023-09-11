@@ -1,0 +1,23 @@
+.CompanySection {
+  margin-top: 111px;
+  margin-bottom: 111px;
+
+  @media (max-width: 768px) {
+    margin-top: 85px;
+    margin-bottom: 85px;
+  }
+
+  .Companies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 84px;
+
+    @media (max-width: 1400px) {
+      justify-content: center;
+      gap: 64px;
+    }
+    @media (max-width: 576px) {
+      gap: 40px;
+    }
+  }
+}

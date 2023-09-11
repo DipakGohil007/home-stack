@@ -1,0 +1,35 @@
+@import "../../style/global";
+.CTAButton {
+  display: inline-block;
+  padding: 20px 12px;
+  color: $color_white;
+  text-align: center;
+  border: none;
+  width: 186px;
+  max-width: 100%;
+  border-radius: 35px;
+  @include montserrat-style(14px, 700, 24px);
+
+  @media (max-width: 576px) {
+    padding: 15px 12px;
+    width: 170px;
+  }
+
+  &.Primary {
+    background-color: $color_crayola;
+    color: $color_white;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $color_rajah;
+      color: $color_black;
+    }
+  }
+  &.Secondary {
+    background-color: $color_white;
+    color: $color_dark_gunmetal;
+    transition: all 0.3s ease-in-out 0s;
+    &:hover {
+      background-color: $color_rajah;
+    }
+  }
+}

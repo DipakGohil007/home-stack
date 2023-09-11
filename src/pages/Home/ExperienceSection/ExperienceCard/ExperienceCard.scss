@@ -1,0 +1,53 @@
+@import "../../../../style/global";
+
+.ExperienceCard {
+  display: flex;
+  align-items: center;
+  background-color: $color_white;
+  border: 1px solid $color_platinum;
+  border-radius: 10px;
+  padding: 32px;
+  height: 122px;
+  max-height: 100%;
+  margin-bottom: 35px;
+  transition: all 0.3s ease;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  .ExperienceCardIcon {
+    margin-right: 36px;
+  }
+
+  .Wrapper {
+    height: 100%;
+    width: 100%;
+
+    .ExperienceCardTitle {
+      @include montserrat-style(24px, 700, unset);
+    }
+    .ExperienceCardDesc {
+      @include montserrat-style(12px, 600, unset);
+      color: $color_spanish_gray;
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    transform: translateX(30px);
+    box-shadow: -25px 47px 66px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 576px) {
+    height: unset;
+    min-height: 122px;
+  }
+  @media (max-width: 992px) {
+    width: 100%;
+    &:hover {
+      transform: none;
+      box-shadow: -25px 47px 66px rgba(0, 0, 0, 0.08);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../style/global";
+
+.ScrollToTop {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: $color_crayola;
+  color: $color_white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 576px) {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &:hover {
+    background-color: $color_rajah;
+  }
+
+  svg {
+    transform: rotate(270deg);
+  }
+}

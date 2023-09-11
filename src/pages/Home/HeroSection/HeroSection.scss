@@ -1,0 +1,152 @@
+@import "../../../style/global";
+
+.HeroSection {
+  background-color: $color_cultured;
+  padding-top: 105px;
+  margin-bottom: 111px;
+
+  @media (max-width: 768px) {
+    padding-top: 85px;
+    margin-bottom: 85px;
+  }
+
+  .HeroText {
+    @include montserrat-style(16px, 700, 20px);
+    letter-spacing: 8px;
+    color: $color_crayola;
+    margin-bottom: 36px;
+    margin-top: 61px;
+
+    @media (max-width: 768px) {
+      letter-spacing: 4px;
+      margin-top: 26px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .HeroTitle {
+    @include montserrat-style(30px, 700, 45px);
+    margin-bottom: 36px;
+
+    @media (min-width: 768px) {
+      @include montserrat-style(50px, 700, 60px);
+    }
+    @media (min-width: 1400px) {
+      @include montserrat-style(66px, 700, 86px);
+    }
+    @media (max-width: 576px) {
+      margin-bottom: 25px;
+    }
+
+    .Highlight {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: $color_rajah;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+          top: 41px;
+          height: 19px;
+        }
+        @media (min-width: 1400px) {
+          top: 53px;
+          height: 28px;
+        }
+      }
+    }
+  }
+
+  .HeroDesc {
+    @include montserrat-style(16px, 500, 36px);
+    max-width: 604px;
+    width: 100%;
+    margin-bottom: 36px;
+    color: $color_spanish_gray;
+
+    @media (max-width: 576px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  .CtaWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 36px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-bottom: 30px;
+      gap: 0;
+    }
+
+    .CTAButton {
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .SocialIcon {
+      display: flex;
+      gap: 36px;
+
+      a {
+        border-radius: 50%;
+      }
+
+      svg {
+        color: $color_spanish_gray;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: $color_dark_gunmetal;
+        }
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .LineDecoration {
+      svg {
+        color: $color_crayola;
+        transition: all 0.3s ease-in-out 0s;
+
+        &:hover {
+          filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+      }
+    }
+  }
+
+  .ImageWrapper {
+    img {
+      max-height: 711px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @media (max-width: 992px) {
+        max-width: 400px;
+      }
+    }
+    @media (max-width: 992px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}

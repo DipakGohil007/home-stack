@@ -1,0 +1,74 @@
+@import "../../../style/global";
+
+.TestimonialSection {
+  background-color: $color_cultured;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  @media (max-width: 576px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 992px) {
+    background: url("../../../assets/images/TestimonialGraphic.png") no-repeat top
+        0 right 0,
+      url("../../../assets/images/IconQuote.png") no-repeat 115px 90px,
+      url("../../../assets/images/IconPac.png") no-repeat left 134px bottom 71px,
+      $color_cultured;
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    padding-bottom: 50px;
+  }
+
+  .TestimonialSectionHeading {
+    @include montserrat-style(40px, 700, 86px);
+    text-align: center;
+    margin-top: 97px;
+    margin-bottom: 66px;
+
+    @media (max-width: 768px) {
+      @include montserrat-style(30px, 700, 40px);
+      margin-top: 47px;
+      margin-bottom: 47px;
+    }
+
+    .Highlight {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: $color_rajah;
+        z-index: -1;
+
+        @media (min-width: 768px) {
+          top: 50px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .TestimonialSectionCard {
+    @include montserrat-style(14px, 500, 36px);
+    color: rgba(21, 30, 44, 0.5);
+    max-width: 709px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .TestimonialCarrousel {
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 576px) {
+      padding-bottom: 60px;
+    }
+  }
+}

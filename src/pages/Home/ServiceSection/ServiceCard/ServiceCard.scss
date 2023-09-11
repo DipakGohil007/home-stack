@@ -1,0 +1,58 @@
+@import "../../../../style/global";
+
+.ServiceCard {
+  max-width: 286px;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: $color_cultured;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+
+  .ServiceCardIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background: $color_crayola;
+    box-shadow: 10px 10px 26px rgba(2, 82, 205, 0.28);
+    border-radius: 10px;
+    margin-bottom: 114px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  .ServiceCardTitle {
+    @include montserrat-style(24px, 700, 26px);
+    margin-bottom: 18px;
+  }
+
+  .ServiceCardDesc {
+    @include montserrat-style(12px, 500, 28px);
+    margin-bottom: 0%;
+  }
+
+  &:hover {
+    background-color: $color_crayola;
+    color: $color_white;
+    box-shadow: 32px 32px 71px rgba(2, 82, 205, 0.28);
+
+    .ServiceCardIcon {
+      background-color: $color_white;
+
+      path {
+        fill: $color_crayola;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}

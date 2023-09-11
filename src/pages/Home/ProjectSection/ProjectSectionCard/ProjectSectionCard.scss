@@ -1,0 +1,108 @@
+@import "../../../../style/global";
+
+.ProjectSectionCard {
+  border-radius: 24px;
+  margin-bottom: 42px;
+  padding: 20px;
+  max-height: 100%;
+
+  @media (min-width: 992px) {
+    height: 444px;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .Project {
+      margin-top: 60px;
+      @media (max-width: 576px) {
+        margin-top: 40px;
+      }
+    }
+
+    .ProjectTitle {
+      @include montserrat-style(40px, 700, 60px);
+      color: $color_white;
+      max-width: 357px;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media (max-width: 576px) {
+        @include montserrat-style(35px, 700, 50px);
+      }
+    }
+
+    .TagWrapper {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 60px;
+      @media (max-width: 576px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .CTA {
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      max-width: 357px;
+      width: 100%;
+      @include montserrat-style(16px, 700, auto);
+      color: $color_white;
+      margin-bottom: 60px;
+      transition: all 0.3s ease-in-out 0s;
+
+      &:hover {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .Mockup {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 373px;
+      max-height: 100%;
+      max-width: 494px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .ProjectSectionTag {
+    @include montserrat-style(14px, 500, 28px);
+    padding: 10px;
+    color: $color_white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+.Primary {
+  background-color: $color_verdigris;
+}
+
+.Secondary {
+  background-color: $color_cornflower_blue;
+}
+
+.Tertiary {
+  background-color: $color_dark_gunmetal;
+}

@@ -1,0 +1,98 @@
+@import "../../../../style/global";
+
+.swiper {
+  padding-bottom: 100px;
+  max-width: 709px;
+  width: 100%;
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-backface-hidden {
+    .swiper-slide {
+      @include montserrat-style(14px, 500, 36px);
+      color: rgba(21, 30, 44, 0.5);
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    height: 88px;
+    width: 88px;
+    background: none;
+
+    img {
+      height: 88px;
+      width: 88px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-pagination-bullets-dynamic {
+    bottom: 200px;
+    @media (max-width: 768px) {
+      bottom: 90px;
+    }
+    @media (max-width: 576px) {
+      bottom: 120px;
+    }
+    @media (max-width: 480px) {
+      bottom: 90px;
+    }
+  }
+
+  .ClientReview {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 36px;
+    color: rgba(21, 30, 44, 0.5);
+    min-height: 200px;
+    max-height: 100%;
+    margin-bottom: 176px;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ClientName {
+    @include montserrat-style(16px, 700, 36px);
+  }
+
+  .ClientDesig {
+    @include montserrat-style(12px, 500, 36px);
+    color: $color_silver;
+  }
+
+  .swiper-pagination-bullet-active-next {
+    transform: scale(0.75) translateX(5px);
+  }
+  .swiper-pagination-bullet-active-prev {
+    transform: scale(0.75) translateX(-5px);
+  }
+
+  .swiper-pagination-bullet-active-prev-prev {
+    transform: scale(0.5) translateX(35px);
+  }
+
+  .swiper-pagination-bullet-active-next-next {
+    transform: scale(0.5) translateX(-35px);
+  }
+}
