@@ -76,6 +76,8 @@
   &.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background: $color_white;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 
   &.show {
